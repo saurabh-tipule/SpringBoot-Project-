@@ -8,6 +8,11 @@ public class HomeController {
 
 	int x = 10;
 	
+	public void m1()
+	{
+		System.out.println("m1---Method");
+	}
+	
 	@RequestMapping(value = "/welcome")
 	public String welcomePage() {
 		String msg = "Welcome Page Called..!";
