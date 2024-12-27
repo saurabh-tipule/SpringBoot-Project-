@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HomeController {
 
+	int x = 10;
+	
 	@RequestMapping(value = "/welcome")
 	public String welcomePage() {
 		String msg = "Welcome Page Called..!";
