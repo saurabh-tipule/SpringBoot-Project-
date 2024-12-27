@@ -9,22 +9,17 @@ import org.springframework.security.web.SecurityFilterChain;
 public class SecurityConfiguration {
 
 	@Bean
-	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception
-	{
-		
-		http.authorizeHttpRequests()
-			.antMatchers("/student").authenticated()
-			.antMatchers("/employee").authenticated()
-			.antMatchers("/admin").authenticated()
-			.antMatchers("/welcome").permitAll()
-			.antMatchers("/home").permitAll()
-			.and()
-			.formLogin()
-			.and()
-			.httpBasic();
-		
+	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+
+		http.authorizeHttpRequests().antMatchers("/student").authenticated().antMatchers("/employee").authenticated()
+				.antMatchers("/admin").authenticated().antMatchers("/welcome").permitAll().antMatchers("/home")
+				.permitAll().and().formLogin().and().httpBasic();
+
 		return http.build();
 	}
-	
-	
+
+	public int m2() {
+		return 10;
+	}
+
 }
